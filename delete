@@ -1,0 +1,7 @@
+from crontab import CronTab
+comment = 'This is the main command'
+tab = CronTab(user='root')
+cron_job = tab.find_comment(cmd)
+#if len(cron_job) > 0:
+#    tab.remove_all(cmd)
+#tab.write()
