@@ -7,11 +7,11 @@ sets a testing variable. So you can print what could be
 written to the file onscreen instead or writting directly
 into the crontab file.
 """
-tab = CronTab()
+tab = CronTab('root')
 cmd = 'echo +1 > cron_output'
 # You can even set a comment for this command
 cron_job = tab.new(cmd, comment='This is the main command')
-cron_job.minute().every(1)
+cron_job.minute.every(1)
 #writes content to crontab
 tab.write()
 print tab.render()
